@@ -33,7 +33,6 @@ int main() {
     std::fstream output_stream;
 
 
-
     std::deque<uint8_t> bytes;
 
     uint8_t ch;
@@ -55,8 +54,6 @@ int main() {
         uint8_t c = bytes.front();
         bytes.pop_front();
 
-        std::cout << (int) a << " " << (int) b << " " << (int) c << std::endl;
-
         if (c % 2 == 0) {
             bytes.push_back(modulo(discriminant(a, b, c), 256));
         } else {
@@ -72,8 +69,6 @@ int main() {
         uint8_t b = bytes.front();
         bytes.pop_front();
 
-        std::cout << (int)a << " " << (int)b << std::endl;
-
         write_to_file(output_stream, a);
         write_to_file(output_stream, b);
     }
@@ -82,8 +77,6 @@ int main() {
         uint8_t a = bytes.front();
 
         bytes.pop_front();
-
-        std::cout << (int)a << std::endl;
 
         write_to_file(output_stream, a);
     }
