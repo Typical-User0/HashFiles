@@ -3,4 +3,4 @@ project(hash_file)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(hash_file main.cpp mathematics.cpp mathematics.h)
+add_executable(hash_file src/main.cpp src/mathematics.cpp lib/mathematics.h)
